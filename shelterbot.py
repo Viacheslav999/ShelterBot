@@ -14,7 +14,7 @@ from aiogram.filters import Command
 
 # Настройки
 TOKEN = "7221043008:AAEkqiTbPjEsZir9FSBt3EdqDqsoe3Ct6O4"
-CHANNEL_ID = '-1002160470436'
+CHANNEL_ID = '-1002194867023'
 bot = Bot(token=TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)  # ✅ Обязательно добавляем storage
@@ -441,7 +441,7 @@ async def confirm_order(callback_query: types.CallbackQuery):
     try:
         # Попытка отправить уведомление в канал с публичным именем
         print("Попытка отправить сообщение в канал...")
-        await bot.send_message('-1002160470436', f"🚨 Новый заказ!\n\n{order_details}")
+        await bot.send_message('-1002194867023', f"🚨 Новый заказ!\n\n{order_details}")
         print("Сообщение успешно отправлено в канал!")
     except Exception as e:
         # Логируем ошибку
